@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HTML Forms</title>
+        <!-- TO DO: Add your name to the meta author tag -->
+        <meta name="author" content="Jessica Barnett">
+        <meta name="description" content="Let's learn how to add a form with semantic widgets to a website using HTML.'">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700">
+        
+        <!-- Stylesheets -->
+        <link href="styles.css" rel="stylesheet">
+
+        <!-- JavaScript -->
+        <script src="scripts.js" defer></script>
+    </head>
+
+    <body id="top">
+        <a href="#main-content" id="skip">Skip to Main Content</a>
+        <header>
+            <h1>HTML Forms</h1>
+        </header>
+
+        <main id="main-content">
+            <p>Each section below asks you to practice coding HTML form widgets. Be sure to use the comments in each section to help you to complete the work. You can refer back to your zyBook, or to the examples in Canvas.</p>
+
+            <section id="form">
+                <h2>Form Code</h2>
+                <p>Scroll within the container below to see all of the code needed to wrap your form widgets and labels.</p>
+                <pre>
+                    <code>
+<!--                 -->&lt;form action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank"&gt;
+            
+<!--                 -->  &lt;!-- form widgets and labels go here --&gt;
+            
+<!--                  -->&lt;/form&gt;
+                    </code>
+                </pre>
+            </section>
+
+            <section id="labels">
+                <h2>Form Labels</h2>
+                <p>All form inputs and widgets require a properly coded label element. The text between the label tags should tell the user the type of expected input and whether or not it is required. The label's <code>for</code> attribute should be set to the same value as the input's ID.</p>
+                <p>Please fill out and submit the form below. Required inputs are marked with an <span class="required">*</span></p>
+
+                <!-- TO DO: Add a form here with the correct action and method attributes, then add a single input for a full name that is required for submission. Be sure to include a properly associated label to this form. You will also need to add a control to allow the user to submit the form. The label should say: "Please Enter Your Full Name: *" and the text on the control to submit should say "Submit Form" -->
+                
+            </section>
+
+            <section id="text-num">
+                <h2>Text &amp; Number Input</h2>
+                <p>Text inputs are probably the type that you will see most often on the web. While they can accept input with letters, numbers, and punctuation, they won't always be the correct/semantic type for your expected input. For our user age input below, we'll make the input type number. While we could use a text input, age should only include a number in years, so a number input would be more appropriate.</p>
+                <p>Please fill out and submit the form below. Required inputs are marked with an <span class="required">*</span></p>
+
+                <form action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank">
+                    <!-- TO DO: add inputs below for the user's name and age, using the correct input types. Both should be required for submission and should be properly associated with their labels -->
+                    <label for="first-name">Please Enter Your First Name: <span class="required">*</span></label>
+                    
+                    
+                    <label for="user-age">Please Enter Your Age in Years: <span class="required">*</span></label>
+                    
+                    
+                    <input type="submit" name="my-submit2" id="my-submit2" value="Submit Form">
+                </form>
+            </section>
+
+            <section id="tel-email">
+                <h2>Telephone &amp; Email Input</h2>
+                <p>Telephone numbers and email addresses can be a pain to type out on the internet. Using the correct input type makes it easier for your users wo autocomplete your forms and it means that a more helpful keyboard will display when they click on an input to fill it out.</p>
+                <p>Please fill out and submit the form below. Required inputs are marked with an <span class="required">*</span></p>
+
+                <form action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank">
+                    
+                    <label for="full-name">Full Name (first and last): <span class="required">*</span></label>
+                    <input type="text" name="full-name" id="full-name" required>
+                    
+                    <!-- TO DO: add inputs below for the user's telephone number and email address - both should be required for submission -->
+                    <label for="email-addr">Email Address: <span class="required">*</span></label>
+                    
+                    
+                    <label for="phone-num">Phone Number: <span class="required">*</span></label>
+                    
+                    
+                    <input type="submit" name="my-submit3" id="my-submit3" value="Submit Form">
+                </form>
+            </section>
+
+            <section id="radio-check">
+                <h2>Fieldsets, Legends, Radio Buttons, &amp; Check Boxes</h2>
+                <p>Radio buttons and check boxes are used a lot in forms. A set of radio buttons gives you options from which you can only choose one. To make this work, be sure to give all of your radio buttons the same name value. Checkboxes allow the user to pick as many of the given options as they want.</p>
+                <p>To see the actual value of the radio sent to the server along with its name when the user makes a choice, include a "value" property and set it to text that aligns with the label.</p>
+                <p>Please fill out and submit the form below. Required inputs are marked with an <span class="required">*</span></p>
+
+                <form action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank">
+                    <!-- TO DO: add fieldset and legend around the radio buttons below, and add an additional radio button giving them to option to choose email as their preferred method of contact. Choosing a selection from these radios should be required for submission -->
+                    
+                        
+                        <input type="radio" name="pref-contact" id="telephone" value="telephone" required checked>
+                        <label for="telephone">Telephone</label>
+                        
+                        <input type="radio" name="pref-contact" id="pigeon" value="pigeon">
+                        <label for="pigeon">Carrier Pigeon</label>
+                        
+                        
+                        
+                    
+                    
+                    <!-- TO DO: add an additional checkbox to the fieldset below -->
+                    <fieldset>
+                        <legend>Toppings: <span class="required">*</span></legend>
+                
+                        <input type="checkbox" name="cheese" id="cheese" value="cheese" required checked>
+                        <label for="cheese">Cheese</label>
+            
+                        <input type="checkbox" name="pepperoni" id="pepperoni" value="pepperoni">
+                        <label for="pepperoni">Pepperoni</label>
+                        
+                        <input type="checkbox" name="peppers" id="peppers" value="bell peppers">
+                        <label for="peppers">Bell Peppers</label>
+                        
+                        <input type="checkbox" name="bacon" id="bacon" value="bacon">
+                        <label for="bacon">Bacon</label>
+                        
+                        <input type="checkbox" name="olives" id="olives" value="olives">
+                        <label for="olives">Olives</label>
+                        
+                        
+                    
+                    </fieldset>
+                    
+                    <input type="submit" name="my-submit4" id="my-submit4" value="Submit Form">
+                </form>
+            </section>
+
+            <section id="select-opt">
+                <h2>Select &amp; Option Elements</h2>
+                <p>The select and option elements combine in multiple ways. In the example below, only one option can be chosen at a time, and because the select is marked as required, and the value on the first option is blank, the user won't be able to submit the form without choosing an option.</p>
+                <p>Please fill out and submit the form below. Required inputs are marked with an <span class="required">*</span></p>
+
+                <!-- TO DO: Add options for Washington D.C. and London campuses to the select options below -->
+                <form action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank">
+
+                    <label for="major">Please Enter Your Major: <span class="required">*</span></label>
+                    <input type="text" name="major" id="major" required>
+            
+                    <label for="my-campus">ASU Campus: <span class="required">*</span></label>
+                    <select name="my-campus" id="my-campus" required>
+                        <option value="">Choose Your Campus</option>
+                        <option value="tempe">Tempe</option>
+                        <option value="dwn-twn">Downtown Phoenix</option>
+                        <option value="west">West</option>
+                        <option value="poly">Polytechnic</option>
+                        <option value="havasu">Lake Havasu</option>
+                        <option value="la">Los Angeles</option>
+
+
+                    </select>
+                
+                    <input type="submit" name="my-submit5" id="my-submit5" value="Submit Form">
+                </form>
+            </section>
+            
+            <section id="textarea">
+                <h2>Textarea Widget</h2>
+                <p>A textarea is used for text that will include more than one line. Things like comments will be added to a textarea.</p>
+                <p>Please fill out and submit the form below. Required inputs are marked with an <span class="required">*</span></p>
+
+                <form action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank">
+            
+                    <label for="full-name-2">Please Enter Your Full Name: <span class="required">*</span></label>
+                    <input type="text" name="full-name-2" id="full-name-2" required>
+                    
+                    <!-- TO DO: add a textarea to the form below -->
+                    <label for="comments">Add Your Comments Below: <span class="required">*</span></label>
+                    
+                    
+                    <input type="submit" name="my-submit6" id="my-submit6" value="Submit Form">
+                </form>
+            </section>
+            
+            <section id="password">
+                <h2>Password Input</h2>
+                <p>The password input will display small circles or asterisks to hide the characters being typed into the input. You would only want to send information like this to the server in a secure way.</p>
+                <p>Please fill out and submit the form below. Required inputs are marked with an <span class="required">*</span></p>
+                    <form action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank">
+
+                    <label for="user-name">User Name: <span class="required">*</span></label>
+                    <input type="text" name="user-name" id="user-name" required>
+
+                    <!-- TO DO: Add a properly coded password input below -->
+                    <label for="pwd">Password: <span class="required">*</span></label>
+                    
+                    
+                    <input type="submit" name="my-submit7" id="my-submit7" value="Submit Form">
+                </form>
+            </section>
+            
+            <section id="other">
+                <h2>Other Input Types</h2>
+                <p>The examples below are just for reference. Some are not supported well in browsers, and some may just not be used as much as others.</p>
+                <p>Please fill out and submit the form below. Required inputs are marked with an <span class="required">*</span></p>
+                <form action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank">
+                    <!-- Color Picker - not well supported - this type of input cannot be marked as required for submission with HTML -->
+                    <label for="color-pick">Choose a Color:</label>
+                    <input type="color" name="color-pick" id="color-pick" value="#0099cc">
+                    
+                    <!-- Date - Not Well Supported -->
+                    <label for="date-pick">Choose Your Birthday:<span class="required">*</span></label>
+                    <input type="date" name="date-pick" id="date-pick" required>
+                    
+                    <!-- File - Not Used as often -->
+                    <label for="file-pick">Choose a File to Upload:<span class="required">*</span></label>
+                    <input type="file" name="file-pick" id="file-pick" required>
+                    
+                    <!-- Range - Not Used as Often - this type of input cannot be marked as required for submission with HTML -->
+                    <label for="score-range">Choose a Score Between 0 and 100:</label>
+                    <input type="range" name="score-range" id="score-range" min="0" max="100" step="1">
+                    <p class="output">Value: <output id="value"></output></p>
+                    
+                    <!-- URL - Not Used as Often -->
+                    <label for="web-addr">Enter Your Website URL:<span class="required">*</span></label>
+                    <input type="url" name="web-addr" id="web-addr" required>
+                    
+                    <input type="submit" name="my-submit8" id="my-submit8" value="Submit Form">
+                </form>
+            </section>
+        </main>
+            
+        <footer>
+            <p>Copyright &copy; <span>2024</span> - Prof. Barnett</p>
+        </footer>
+    </body>
+</html>
