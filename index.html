@@ -4,8 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>HTML Forms</title>
-        <!-- TO DO: Add your name to the meta author tag -->
-        <meta name="author" content="Jessica Barnett">
+        <meta name="author" content="Zach Andrews">
         <meta name="description" content="Let's learn how to add a form with semantic widgets to a website using HTML.'">
 
         <!-- Favicon -->
@@ -50,8 +49,12 @@
                 <p>All form inputs and widgets require a properly coded label element. The text between the label tags should tell the user the type of expected input and whether or not it is required. The label's <code>for</code> attribute should be set to the same value as the input's ID.</p>
                 <p>Please fill out and submit the form below. Required inputs are marked with an <span class="required">*</span></p>
 
-                <!-- TO DO: Add a form here with the correct action and method attributes, then add a single input for a full name that is required for submission. Be sure to include a properly associated label to this form. You will also need to add a control to allow the user to submit the form. The label should say: "Please Enter Your Full Name: *" and the text on the control to submit should say "Submit Form" -->
-                
+                <form action="https://wp.zybooks.com/form-viewer.php" mathod="POST" target="_blank">
+                    <label for="f-name">Please Enter Your Full Name:<span class="required">*</span></label>
+                    <input type="text" name="f-name" id="f-name" required>
+                    <input type="submit" name="my-submit" id="my-submit" value="Submit Form">
+                </form>
+
             </section>
 
             <section id="text-num">
@@ -60,12 +63,11 @@
                 <p>Please fill out and submit the form below. Required inputs are marked with an <span class="required">*</span></p>
 
                 <form action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank">
-                    <!-- TO DO: add inputs below for the user's name and age, using the correct input types. Both should be required for submission and should be properly associated with their labels -->
                     <label for="first-name">Please Enter Your First Name: <span class="required">*</span></label>
-                    
+                    <input type="text" name="first-name" id="first-name" required>
                     
                     <label for="user-age">Please Enter Your Age in Years: <span class="required">*</span></label>
-                    
+                    <input type="number" name="user-age" id="user-age" required>
                     
                     <input type="submit" name="my-submit2" id="my-submit2" value="Submit Form">
                 </form>
@@ -81,12 +83,11 @@
                     <label for="full-name">Full Name (first and last): <span class="required">*</span></label>
                     <input type="text" name="full-name" id="full-name" required>
                     
-                    <!-- TO DO: add inputs below for the user's telephone number and email address - both should be required for submission -->
                     <label for="email-addr">Email Address: <span class="required">*</span></label>
-                    
+                    <input type="email" name="email-addr" id="email-addr" required>
                     
                     <label for="phone-num">Phone Number: <span class="required">*</span></label>
-                    
+                    <input type="tel" name="phone-num" id="phone-num" required>
                     
                     <input type="submit" name="my-submit3" id="my-submit3" value="Submit Form">
                 </form>
@@ -99,20 +100,21 @@
                 <p>Please fill out and submit the form below. Required inputs are marked with an <span class="required">*</span></p>
 
                 <form action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank">
-                    <!-- TO DO: add fieldset and legend around the radio buttons below, and add an additional radio button giving them to option to choose email as their preferred method of contact. Choosing a selection from these radios should be required for submission -->
-                    
-                        
+
+                    <fieldset>
+                        <legend>Preferred Method of Contact</legend>
+
                         <input type="radio" name="pref-contact" id="telephone" value="telephone" required checked>
                         <label for="telephone">Telephone</label>
                         
                         <input type="radio" name="pref-contact" id="pigeon" value="pigeon">
                         <label for="pigeon">Carrier Pigeon</label>
+
+                        <input type="radio" name="pref-contact" id="email" value="email">
+                        <label for="email">Email</label>
                         
-                        
-                        
-                    
-                    
-                    <!-- TO DO: add an additional checkbox to the fieldset below -->
+                    </fieldset>
+
                     <fieldset>
                         <legend>Toppings: <span class="required">*</span></legend>
                 
@@ -131,7 +133,8 @@
                         <input type="checkbox" name="olives" id="olives" value="olives">
                         <label for="olives">Olives</label>
                         
-                        
+                        <input type="checkbox" name="anchovies" id="anchovies" value="anchovies">
+                        <label for=""anchovies>Anchovies</label>
                     
                     </fieldset>
                     
@@ -144,7 +147,6 @@
                 <p>The select and option elements combine in multiple ways. In the example below, only one option can be chosen at a time, and because the select is marked as required, and the value on the first option is blank, the user won't be able to submit the form without choosing an option.</p>
                 <p>Please fill out and submit the form below. Required inputs are marked with an <span class="required">*</span></p>
 
-                <!-- TO DO: Add options for Washington D.C. and London campuses to the select options below -->
                 <form action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank">
 
                     <label for="major">Please Enter Your Major: <span class="required">*</span></label>
@@ -159,7 +161,8 @@
                         <option value="poly">Polytechnic</option>
                         <option value="havasu">Lake Havasu</option>
                         <option value="la">Los Angeles</option>
-
+                        <option value="dc">Washington D.C.</option>
+                        <option value="london">London</option>
 
                     </select>
                 
@@ -177,9 +180,8 @@
                     <label for="full-name-2">Please Enter Your Full Name: <span class="required">*</span></label>
                     <input type="text" name="full-name-2" id="full-name-2" required>
                     
-                    <!-- TO DO: add a textarea to the form below -->
                     <label for="comments">Add Your Comments Below: <span class="required">*</span></label>
-                    
+                    <textarea name="comments" id="comments" required></textarea>
                     
                     <input type="submit" name="my-submit6" id="my-submit6" value="Submit Form">
                 </form>
@@ -194,9 +196,8 @@
                     <label for="user-name">User Name: <span class="required">*</span></label>
                     <input type="text" name="user-name" id="user-name" required>
 
-                    <!-- TO DO: Add a properly coded password input below -->
                     <label for="pwd">Password: <span class="required">*</span></label>
-                    
+                    <input type="password" name="pwd" id="pwd" required>
                     
                     <input type="submit" name="my-submit7" id="my-submit7" value="Submit Form">
                 </form>
@@ -234,7 +235,7 @@
         </main>
             
         <footer>
-            <p>Copyright &copy; <span>2024</span> - Prof. Barnett</p>
+            <p>Copyright &copy; <span>2025</span> - Zach Andrews</p>
         </footer>
     </body>
 </html>
